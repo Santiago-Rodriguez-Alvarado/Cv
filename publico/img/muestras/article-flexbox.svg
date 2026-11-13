@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="flex-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f2e8"/>
+      <stop offset="1" stop-color="#eae2d3"/>
+    </linearGradient>
+    <pattern id="flex-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#14211e" stroke-opacity=".06"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#flex-bg)"/>
+  <rect width="800" height="500" fill="url(#flex-grid)"/>
+  <circle cx="94" cy="100" r="58" fill="#b9542f" opacity=".12"/>
+  <circle cx="716" cy="408" r="66" fill="#14211e" opacity=".06"/>
+  <rect x="148" y="96" width="504" height="308" rx="26" fill="none" stroke="#b9542f" stroke-width="3" stroke-dasharray="10 10"/>
+  <rect x="178" y="126" width="198" height="102" rx="16" fill="#b9542f"/>
+  <rect x="398" y="126" width="222" height="102" rx="16" fill="#14211e"/>
+  <rect x="178" y="252" width="104" height="120" rx="16" fill="#f2d9cd"/>
+  <rect x="304" y="252" width="138" height="120" rx="16" fill="#fffdf8" stroke="#c9bda9"/>
+  <rect x="464" y="252" width="156" height="120" rx="16" fill="#34413d"/>
+  <rect x="204" y="158" width="84" height="10" rx="5" fill="#fbf8f1" opacity=".75"/>
+  <rect x="204" y="180" width="128" height="8" rx="4" fill="#fbf8f1" opacity=".35"/>
+  <rect x="424" y="158" width="92" height="10" rx="5" fill="#fbf8f1" opacity=".7"/>
+  <rect x="424" y="180" width="146" height="8" rx="4" fill="#fbf8f1" opacity=".3"/>
+  <circle cx="230" cy="306" r="16" fill="#b9542f" opacity=".7"/>
+  <rect x="330" y="298" width="54" height="8" rx="4" fill="#b9542f"/>
+  <rect x="330" y="316" width="82" height="7" rx="3.5" fill="#66736e" opacity=".35"/>
+  <circle cx="542" cy="300" r="16" fill="#fbf8f1" opacity=".25"/>
+</svg>

@@ -10,9 +10,9 @@ Single-page static CV (Spanish) with no package manager, build step, tests, or C
 
 ## Wiring gotchas
 
-- `index.html` loads `css/styles.css` and `js/interactions.js`, but neither file exists. The real tracked sources are the root-level `cssstyles.css` and `jsinteractions.js`. CSS/JS edits are invisible until you reconcile the `<link>`/`<script>` paths or move the files.
-- `js/js.txt` is a byte-identical duplicate of `jsinteractions.js`; do not edit it.
-- Every `/publico/img/muestras/*.svg` reference is missing from the repo (`banner.svg`, `thumb-cv.svg`, `thumb-store.svg`, `article-html.svg`, `article-flexbox.svg`, `article-accessibility.svg`). The about banner, project thumbnails, and skills gallery are broken until those assets are added under `publico/img/muestras/`.
+- `index.html` loads `css/styles.css` (the canonical, redesigned stylesheet) and `js/interactions.js` (the canonical interactive script). The root-level `styles.css` and `interactions.js` are legacy copies and are not loaded; do not edit them for visual changes.
+- `js/js.txt` is a byte-identical duplicate of the legacy root `interactions.js`; do not edit it.
+- Project and gallery images are placeholder SVGs under `publico/img/muestras/`; replace them with real screenshots using the same filenames. The legacy stylesheet still references `banner.svg`, but the active stylesheet does not.
 - `.gitignore` is UTF-16LE with a BOM (most tools read it as binary). Leave its encoding alone unless deliberately fixing it.
 - Page copy is Mexican Spanish; keep new copy in Spanish. Files are UTF-8 (`.gitignore` excepted) with CRLF line endings.
 
@@ -20,8 +20,8 @@ Single-page static CV (Spanish) with no package manager, build step, tests, or C
 
 The handwritten code contains syntax errors that can mask your changes:
 
-- JS: the "Más sobre mí" toggle listens for `'button'` instead of `'click'`.
-- CSS: `font-family;` is missing its value, `hegiht`/`front-size` are typos, `padding: 8px:` uses a colon, and the `@media (max-width: 600px)` block is malformed.
+- JS: the active `js/interactions.js` is fixed; the legacy root `interactions.js` and `js/js.txt` still listen for `'button'` instead of `'click'`.
+- CSS: the root `styles.css` still has the old syntax errors (`font-family;`, `hegiht`, `front-size`, `padding: 8px:`, malformed `@media`); the active `css/styles.css` is clean.
 - HTML: `<body>` opens inside `<header>`, `<h1>` sits outside `<main>`, and `aria-labelledby="expericence-title"` does not match `id="experience-title"`.
 
 ## Reglas del curso
