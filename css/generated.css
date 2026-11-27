@@ -340,7 +340,7 @@ p:last-child {
 #about .col-1-2:first-of-type p {
   color: var(--ink);
   font-family: var(--font-body);
-  font-size: (1.15rem);
+  font-size: 1.15rem;
   letter-spacing: -0.015em;
   line-height: 1.5;
 }
